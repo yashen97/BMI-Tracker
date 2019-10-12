@@ -245,9 +245,9 @@ namespace BMI_Calculator__Graphical_
 
                 int value = RandomNumber();
 
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Database\BMI.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Database\BMI.mdf;Integrated Security=True;Connect Timeout=30"); //sql connection adapter
                 con.Open();
-                string qry = "INSERT INTO track values ('"+value+"','"+textBox4.Text.Trim()+"','"+textBox5.Text+"','"+m+"','"+kg+"','"+bmi+"','"+label5.Text.Trim()+"')";
+                string qry = "INSERT INTO track values ('"+value+"','"+textBox4.Text.Trim()+"','"+textBox5.Text+"','"+m+"','"+kg+"','"+bmi+"','"+label5.Text.Trim()+"')"; //connection string
                 try
                 {
                     SqlCommand cmd = new SqlCommand(qry, con);
